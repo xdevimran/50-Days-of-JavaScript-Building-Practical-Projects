@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#E8ECF3] body">
+    <main class="container mx-auto">
+      <section class="py-20">
+        <h2 class="text-4xl text-center text-[01020C] font-bold">
+          Color Palette generator
+        </h2>
+      </section>
+      <!-- color box -->
+      <section>
+        <div class="flex justify-center items-center gap-5 flex-wrap text-white text-center font-bold">
+          <!-- box 1 -->
+          <div
+            class="bg-red-50 flex flex-col p-4 items-center rounded-xl space-y-5"
+          >
+            <div class="colorBox bg-[#EEEDF0] w-48 h-72 rounded-xl"></div>
+          </div>
+          <!-- box 2 -->
+          <div
+            class="bg-red-50 flex flex-col p-4 items-center rounded-xl space-y-5"
+          >
+            <div class="colorBox bg-[#A1B5C1] w-48 h-72 rounded-xl"></div>
+          </div>
+          <!-- box 3 -->
+          <div
+            class="bg-red-50 flex flex-col p-4 items-center rounded-xl space-y-5"
+          >
+            <div class="colorBox bg-[#F9ACA7] w-48 h-72 rounded-xl"></div>
+          </div>
+          <!-- box 4 -->
+          <div
+            class="bg-red-50 flex flex-col p-4 items-center rounded-xl space-y-5"
+          >
+            <div class="colorBox bg-[#68747D] w-48 h-72 rounded-xl"></div>
+          </div>
+          <!-- box 5 -->
+          <div
+            class="bg-red-50 flex flex-col p-4 items-center rounded-xl space-y-5"
+          >
+            <div class="colorBox bg-[#CF365F] w-48 h-72 rounded-xl"></div>
+          </div>
+        </div>
+      </section>
+      <!-- button section  -->
+      <section class="flex items-center justify-center py-20">
+        <button
+          id="colorButton"
+          class="text-white text-2xl bg-[#7E6CCA] py-2 px-7 rounded-md shadow-xl"
+        >
+          Generate Palette
+        </button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
