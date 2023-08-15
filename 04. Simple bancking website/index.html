@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Bancking Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-mono bg-gradient-to-r from-blue-200 to-cyan-200">
+    <main class="w-3/4 container mx-auto text-center">
+      <!-- header section -->
+      <header class="my-20">
+        <h1 class="text-5xl">
+          Welcome to
+          <span
+            class="text-5xl font-semibold bg-gradient-to-r from-violet-500 to-fuchsia-500 text-transparent bg-clip-text"
+            >Online Bank</span
+          >
+        </h1>
+      </header>
+      <!-- login section  -->
+      <div
+        class="bg-gradient-to-r from-cyan-500 to-blue-500 p-10 text-white md:w-4/6 lg:w-2/5 mx-auto rounded-md shadow-lg"
+      >
+        <h3 class="text-2xl py-5">Please Login</h3>
+        <!-- input form  -->
+        <div class="flex flex-col gap-5">
+          <input
+            id="email-field"
+            class="text-black h-8 outline-none rounded-sm p-3 py-5"
+            type="text"
+            placeholder="admin@mail.com"
+          />
+          <input
+            id="password-field"
+            class="text-black h-8 outline-none rounded-sm p-3 py-5"
+            type="password"
+            placeholder="admin"
+          />
+          <div>
+            <button
+              id="login-btn"
+              class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-pink-500 hover:to-yellow-500 py-2 px-5 text-xl font-bold rounded-md"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
