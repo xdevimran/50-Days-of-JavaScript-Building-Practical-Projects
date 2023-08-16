@@ -7,22 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Random Quote Generator</title>
   </head>
-  <body class="bg-[#B85C18]">
+  <body class="bg-gradient-to-r from-teal-200 to-lime-200">
     <main
       class="container mx-auto text-center h-screen flex flex-col justify-center items-center space-y-10"
     >
-      <h2 class="text-4xl text-yellow-50">Javascript Quote Generator</h2>
+      <h2 class="text-4xl text-black">Javascript Quote Generator</h2>
       <!-- quote box  -->
       <div
         class="bg-[#FEFFFF] flex flex-col justify-center items-center rounded-xl space-y-7 p-5 py-7 shadow-lg lg:w-1/2 sm:w-11/12"
       >
-        <p class="text-3xl">
+        <p id="quote" class="text-3xl">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
           facilis atque tempora perspiciatis a dolor labore sunt iste, culpa
           eaque!
         </p>
-        <h4 class="text-2xl text-[#A44200]">Name</h4>
-        <button class="bg-black text-white px-4 py-3 rounded-sm text-lg">
+        <h4 id="author" class="text-2xl text-[#A44200]">Name</h4>
+        <button id="quote-btn" class="bg-gradient-to-r from-rose-400 to-orange-300 text-black px-4 py-3 rounded-sm text-lg">
           Find Quotes
         </button>
       </div>
