@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Book store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="container mx-auto">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost btn-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Homepage</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>About</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="navbar-center">
+            <a class="btn btn-ghost normal-case text-xl">Logo</a>
+          </div>
+          <div class="navbar-end">
+            <button class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <button class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                  />
+                </svg>
+                <span
+                  class="badge badge-xs badge-primary indicator-item"
+                ></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto">
+      <!-- card container  -->
+      <div class="flex flex-wrap gap-4 justify-center items-center mt-20">
+        <!-- card-one  -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="h-56"
+              src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/yellow-business-leadership-book-cover-design-template-dce2f5568638ad4643ccb9e725e5d6ff_screen.jpg?ts=1637017516"
+              alt="Shoes"
+            />
+          </figure>
+          <div class="card-body flex items-center">
+            <h2 class="card-title">The mind of a leader</h2>
+            <p>"A word after a word after a word is power."</p>
+            <p>Price: 35 $</p>
+            <button
+              class="btn bg-yellow-600 text-white"
+              onclick="clickBtn(this)"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+        <!-- card-two  -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="h-56"
+              src="https://i.pinimg.com/736x/a1/f8/87/a1f88733921c820db477d054fe96afbb.jpg"
+              alt="Shoes"
+            />
+          </figure>
+          <div class="card-body flex items-center">
+            <h2 class="card-title">Light beyound the garden wall</h2>
+            <p>"Books are a uniquely portable magic."</p>
+            <p>Price 50$</p>
+            <button
+              class="btn bg-yellow-600 text-white"
+              onclick="clickBtn(this)"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+        <!-- card-three  -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="h-56"
+              src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198"
+              alt="Shoes"
+            />
+          </figure>
+          <div class="card-body flex items-center">
+            <h2 class="card-title">The book of ART</h2>
+            <p>"I can feel infinitely alive"</p>
+            <p>Price 75$</p>
+            <button
+              class="btn bg-yellow-600 text-white"
+              onclick="clickBtn(this)"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+        <div
+          id="invoice-container"
+          class="flex flex-col items-center justify-center card w-96 bg-base-100 shadow-xl"
+        >
+          <h2>Total: <span id="total-price">00</span></h2>
+          <h2>Discount: 00</h2>
+          <hr />
+          <h2>Grand Total: 00</h2>
+        </div>
+      </div>
+      <!-- cart container  -->
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
