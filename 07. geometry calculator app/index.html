@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Javascript Calculator Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- navigation  -->
+    <nav>
+      <div class="navbar bg-base-100 container mx-auto">
+        <div class="navbar-start">
+          <a class="normal-case text-xl">Interactive</a>
+        </div>
+        <div class="navbar-end">
+          <a class="btn btn-primary">Blog</a>
+        </div>
+      </div>
+    </nav>
+    <!-- main section  -->
+    <main class="container mx-auto flex gap-2 mt-10">
+      <!-- Card container  -->
+      <div class="flex flex-wrap gap-5 container mx-auto justify-center items-center">
+        <!-- card Triangle -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center text-slate-600">
+            <h2 class="card-title text-slate-700">Triangle</h2>
+            <p>Area (A) = 0.5 x b x h</p>
+            <p class="flex items-center justify-center gap-5">
+              <!-- base input  -->
+              <span
+                ><input
+                  id="baseInputField"
+                  placeholder="b"
+                  type="text"
+                  class="px-2 bg-slate-200 rounded-md w-20 text-black"
+                />
+                cm
+              </span>
+              <!-- height input  -->
+              <span
+                ><input
+                  id="heightInputField"
+                  placeholder="h"
+                  type="text"
+                  class="px-2 bg-slate-200 rounded-md w-20 text-black"
+                />
+                cm
+              </span>
+              <p>Area: <span id="triangleAns">00</span>cm <sup>2</sup></p>
+            </p>
+            <div class="card-actions mt-10">
+              <button
+                onclick="calculateTriangleArea()"
+                id="triangle-btn"
+                class="btn btn-primary lg:w-80"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- card Rectangle -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center text-slate-600">
+            <h2 class="card-title text-slate-700">Rectangle</h2>
+            <p>Area (A) = w x l</p>
+            <p class="flex items-center justify-center gap-5">
+              <!-- width input  -->
+              <span
+                ><input
+                id="widthInputField"
+                  placeholder="w"
+                  type="text"
+                  class="px-2 bg-slate-200 rounded-md w-20 text-black"
+                />
+                cm
+              </span>
+              <!-- length input  -->
+              <span
+                ><input
+                id="lengthInputField"
+                  placeholder="l"
+                  type="text"
+                  class="px-2 bg-slate-200 rounded-md w-20 text-black"
+                />
+                cm
+              </span>
+              <p>Area: <span id="rectangleAns">00</span>cm <sup>2</sup></p>
+            </p>
+            <div class="card-actions mt-10">
+              <button onclick="calculateRectangleArea()" class="btn btn-primary lg:w-80">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- card Parallelogram -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="images/parallelogram.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center text-slate-600">
+            <h2 class="card-title text-slate-700">Rectangle</h2>
+            <p>Area (A) = w x l</p>
+            <p class="flex items-center justify-center gap-5">
+              <!-- base input  -->
+              <span
+                ><input
+                id="parallelo-base-input"
+                  placeholder="b"
+                  type="text"
+                  class="px-2 bg-slate-200 rounded-md w-20 text-black"
+                />
+                cm
+              </span>
+              <!-- height input  -->
+              <span
+                ><input
+                id="parallelo-height-input"
+                  placeholder="h"
+                  type="text"
+                  class="px-2 bg-slate-200 rounded-md w-20 text-black"
+                />
+                cm
+              </span>
+              <p>Area: <span id="paralleloAns">00</span>cm <sup>2</sup></p>
+            </p>
+            <div class="card-actions mt-10">
+              <button onclick="calculateParallelogramArea()" class="btn btn-primary lg:w-80">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- last three card  -->
+      <!-- card Rhombus -->
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure class="px-10 pt-10">
+    <img src="images/rhombus.png" alt="Shoes" class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center text-slate-600">
+    <h2 class="card-title text-slate-700">Rhombus</h2>
+    <p>Area (A) = 0.5 x b x h</p>
+    <p class="flex items-center justify-center gap-5">
+      <!-- base input  -->
+      <span
+        ><input
+          id="rhombus-base-input"
+          placeholder="b"
+          type="text"
+          class="px-2 bg-slate-200 rounded-md w-20 text-black"
+        />
+        cm
+      </span>
+      <!-- height input  -->
+      <span
+        ><input
+          id="rhombus-height-input"
+          placeholder="h"
+          type="text"
+          class="px-2 bg-slate-200 rounded-md w-20 text-black"
+        />
+        cm
+      </span>
+      <p>Area: <span id="rhombusAns">00</span>cm <sup>2</sup></p>
+    </p>
+    <div class="card-actions mt-10">
+      <button onclick="calculateRhombusArea()" class="btn btn-primary lg:w-80">Calculate</button>
+    </div>
+  </div>
+</div>
+
+<!-- card Pentagon -->
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure class="px-10 pt-10">
+    <img src="images/pentagon.png" alt="Shoes" class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center text-slate-600">
+    <h2 class="card-title text-slate-700">Pentagon</h2>
+    <p>Area (A) = w x l</p>
+    <p class="flex items-center justify-center gap-5">
+      <!-- width input  -->
+      <span
+        ><input
+          id="pentagon-width-input"
+          placeholder="w"
+          type="text"
+          class="px-2 bg-slate-200 rounded-md w-20 text-black"
+        />
+        cm
+      </span>
+      <!-- length input  -->
+      <span
+        ><input
+          id="pentagon-length-input"
+          placeholder="l"
+          type="text"
+          class="px-2 bg-slate-200 rounded-md w-20 text-black"
+        />
+        cm
+      </span>
+      <p>Area: <span id="pentagonAns">00</span>cm <sup>2</sup></p>
+    </p>
+    <div class="card-actions mt-10">
+      <button onclick="calculatePentagonArea()" class="btn btn-primary lg:w-80">Calculate</button>
+    </div>
+  </div>
+</div>
+
+<!-- card Ellipse -->
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure class="px-10 pt-10">
+    <img src="images/ellipse.png" alt="Shoes" class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center text-slate-600">
+    <h2 class="card-title text-slate-700">Ellipse</h2>
+    <p>Area (A) = π x a x b</p>
+    <p class="flex items-center justify-center gap-5">
+      <!-- semi-major axis input  -->
+      <span
+        ><input
+          id="ellipse-semi-major-input"
+          placeholder="a"
+          type="text"
+          class="px-2 bg-slate-200 rounded-md w-20 text-black"
+        />
+        cm
+      </span>
+      <!-- semi-minor axis input  -->
+      <span
+        ><input
+          id="ellipse-semi-minor-input"
+          placeholder="b"
+          type="text"
+          class="px-2 bg-slate-200 rounded-md w-20 text-black"
+        />
+        cm
+      </span>
+      <p>Area: <span id="ellipseAns">00</span>cm <sup>2</sup></p>
+    </p>
+    <div class="card-actions mt-10">
+      <button onclick="calculateEllipseArea()" class="btn btn-primary lg:w-80">Calculate</button>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <!-- Aside  -->
+      <!-- <div class="w-1/5 m">
+        <p>This is a simple test <span class="bg-[rgb(77,6,220)] p-2  text-white">Added</span></p>
+      </div> -->
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
